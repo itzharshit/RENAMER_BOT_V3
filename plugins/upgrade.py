@@ -30,7 +30,7 @@ async def upgrade(bot,update):
         Payment To @michaelpanther"""
 	keybord = InlineKeyboardMarkup([[ 
         			InlineKeyboardButton("ADMIN 🛂",url = "https://t.me/MichaelPanther")], 
-        			[InlineKeyboardButton("Crypto 🌎",url = "https://www.paypal.me/lokamanchendekar"),
+        			[InlineKeyboardButton("Crypto 🌎",url = "https://t.me/MichaelPanther"),
         			InlineKeyboardButton("Debit, credit card",url = "https://t.me/MichaelPanther")],[InlineKeyboardButton("Cancel",callback_data = "cancel")  ]])
 	await update.message.edit(text = text,reply_markup = keybord)
 	
@@ -64,6 +64,6 @@ async def upgradecm(bot,message):
         Payment To @michaelpanther"""
 	keybord = InlineKeyboardMarkup([[ 
         			InlineKeyboardButton("ADMIN 🛂",url = "https://t.me/MichaelPanther")], 
-        			[InlineKeyboardButton("Crypto 🌎",url = "https://www.paypal.me/lokamanchendekar"),
+        			[InlineKeyboardButton("Crypto 🌎",url = "https://t.me/MichaelPanther"),
         			InlineKeyboardButton("Debit, credit card",url = "https://t.me/MichaelPanther")],[InlineKeyboardButton("Cancel",callback_data = "cancel") ]])
 	await message.reply_text(text = text,reply_markup = keybord)
