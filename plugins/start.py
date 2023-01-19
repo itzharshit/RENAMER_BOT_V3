@@ -42,7 +42,7 @@ async def start(client,message):
 	**Document Or Video** and follow further instructions to rename it__
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Updates Channel" ,url="https://t.me/lntechnical") ], 
+	 [[ InlineKeyboardButton("Updates Channel" ,url="https://t.me/pyrogrammers") ], 
 	[InlineKeyboardButton("Support Group", url="https://t.me/+e0hay-RhwP45ZjM1") ]  ]))
 	    return
 	if id:
@@ -55,7 +55,7 @@ async def start(client,message):
 	**Document Or Video**  and follow further instructions to rename it__
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Updates Channel" ,url="https://t.me/lntechnical") ], 
+	 [[ InlineKeyboardButton("Updates Channel" ,url="https://t.me/pyrogrammers") ], 
 	[InlineKeyboardButton("Support group", url="https://t.me/+e0hay-RhwP45ZjM1") ]  ]))
 	        except:
 	             return
@@ -71,7 +71,7 @@ async def start(client,message):
 	**Document Or Video** and enter new filename to rename it__
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Updates channel" ,url="https://t.me/lntechnical") ], 
+	 [[ InlineKeyboardButton("Updates channel" ,url="https://t.me/pyrogrammers") ], 
 	[InlineKeyboardButton("Support group", url="https://t.me/+e0hay-RhwP45ZjM1") ]  ]))
 	         
 
