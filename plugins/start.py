@@ -37,26 +37,26 @@ async def start(client,message):
 	    id = message.text.split(' ')[1]
 	except:
 	    await message.reply_text(text =f"""
-	Hello {wish} {message.from_user.first_name }
-	__I am file renamer bot, Please sent any telegram 
-	**Document Or Video** and enter new filename to rename it__
+	Hii, {wish} {message.from_user.first_name }
+	__I am pyrogrammers file rename bot, send me any 
+	**Document Or Video** and follow further instructions to rename it__
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	 [[ InlineKeyboardButton("Updates Channel" ,url="https://t.me/lntechnical") ], 
+	[InlineKeyboardButton("Support Group 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
 	    return
 	if id:
 	    if old == True:
 	        try:
-	            await client.send_message(id,"Your Frind Alredy Using Our Bot")
+	            await client.send_message(id,"Sorry, but your friend is already using me.")
 	            await message.reply_text(text =f"""
-	Hello {wish} {message.from_user.first_name }
-	__I am file renamer bot, Please sent any telegram 
-	**Document Or Video** and enter new filename to rename it__
+	Hii, {wish} {message.from_user.first_name }
+	__I am pyrogrammers file rename bot, send me any telegram 
+	**Document Or Video**  and follow further instructions to rename it__
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	 [[ InlineKeyboardButton("Updates Channel" ,url="https://t.me/lntechnical") ], 
+	[InlineKeyboardButton("Support group", url="https://youtube.com/c/LNtechnical") ]  ]))
 	        except:
 	             return
 	    else:
@@ -148,7 +148,7 @@ async def send_doc(client,message):
        		            return
        		        pre_check = check_expi(buy_date)
        		        if pre_check == True:
-       		            await message.reply_text(f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {humanize.naturalsize(file.file_size)}\n**Dc ID** :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),InlineKeyboardButton("✖️ Cancel",callback_data = "cancel")  ]]))
+       		            await message.reply_text(f"""__What are you thinking to do?__\n**File Name** :- {filename}\n**File Size** :- {humanize.naturalsize(file.file_size)}\n**Dc ID** :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),InlineKeyboardButton("✖️ Cancel",callback_data = "cancel")  ]]))
        		            total_rename(int(botid),prrename)
        		            total_size(int(botid),prsize,file.file_size)
        		        else:
@@ -158,7 +158,7 @@ async def send_doc(client,message):
        		            await message.reply_text(f'Your Plane Expired On {buy_date}',quote=True)
        		            return
        		    else:
-       		          	await message.reply_text("Can't upload files bigger than 2GB ")
+       		          	await message.reply_text("Can't upload files greater than 2GB ")
        		          	return
        		else:
        		    if buy_date:
@@ -173,5 +173,5 @@ async def send_doc(client,message):
        		    total_size(int(botid),prsize,file.file_size)
        		    await message.reply_text(f"""__What do you want me to do with this file?__\n**File Name** :- {filename}\n**File Size** :- {filesize}\n**Dc ID** :- {dcid}""",reply_to_message_id = message.id,reply_markup = InlineKeyboardMarkup(
        		[[ InlineKeyboardButton("📝 Rename",callback_data = "rename"),
-       		InlineKeyboardButton("✖️ Cancel",callback_data = "cancel")  ]]))
+       		InlineKeyboardButton("✖️ Abort",callback_data = "cancel")  ]]))
        		
