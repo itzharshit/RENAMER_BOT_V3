@@ -4,7 +4,7 @@ token = os.environ.get('TOKEN','')
 botid = token.split(':')[0]
 from helper.database import botdata, find_one, total_user
 from helper.progress import humanbytes
-@Client.on_message(filters.private & filters.command(["about"]))
+@Client.on_message(filters.private & filters.command(["aboult"]))
 async def start(client,message):
 	botdata(int(botid))
 	data = find_one(int(botid))
