@@ -43,7 +43,7 @@ async def start(client,message):
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Updates Channel" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Support Group", url="https://youtube.com/c/LNtechnical") ]  ]))
+	[InlineKeyboardButton("Support Group", url="https://t.me/+e0hay-RhwP45ZjM1") ]  ]))
 	    return
 	if id:
 	    if old == True:
@@ -56,7 +56,7 @@ async def start(client,message):
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Updates Channel" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Support group", url="https://youtube.com/c/LNtechnical") ]  ]))
+	[InlineKeyboardButton("Support group", url="https://t.me/+e0hay-RhwP45ZjM1") ]  ]))
 	        except:
 	             return
 	    else:
@@ -72,7 +72,7 @@ async def start(client,message):
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Updates channel" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Support group", url="https://youtube.com/c/LNtechnical") ]  ]))
+	[InlineKeyboardButton("Support group", url="https://t.me/+e0hay-RhwP45ZjM1") ]  ]))
 	         
 
 
