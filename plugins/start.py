@@ -43,7 +43,7 @@ async def start(client,message):
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
 	 [[ InlineKeyboardButton("Updates Channel" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Support Group 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	[InlineKeyboardButton("Support Group", url="https://youtube.com/c/LNtechnical") ]  ]))
 	    return
 	if id:
 	    if old == True:
@@ -71,8 +71,8 @@ async def start(client,message):
 	**Document Or Video** and enter new filename to rename it__
 	""",reply_to_message_id = message.id ,  
 	reply_markup=InlineKeyboardMarkup(
-	 [[ InlineKeyboardButton("Support 🇮🇳" ,url="https://t.me/lntechnical") ], 
-	[InlineKeyboardButton("Subscribe 🧐", url="https://youtube.com/c/LNtechnical") ]  ]))
+	 [[ InlineKeyboardButton("Updates channel" ,url="https://t.me/lntechnical") ], 
+	[InlineKeyboardButton("Support group", url="https://youtube.com/c/LNtechnical") ]  ]))
 	         
 
 
@@ -85,10 +85,10 @@ async def send_doc(client,message):
        	try:
        		await client.get_chat_member(update_channel, user_id)
        	except UserNotParticipant:
-       		await message.reply_text("**__You are not subscribed my channel__** ",
+       		await message.reply_text("**Please join my updates channel in order to use me.** ",
        		reply_to_message_id = message.id,
        		reply_markup = InlineKeyboardMarkup(
-       		[ [ InlineKeyboardButton("Support 🇮🇳" ,url=f"https://t.me/{update_channel}") ]   ]))
+       		[ [ InlineKeyboardButton("Updates Channel" ,url=f"https://t.me/{update_channel}") ]   ]))
        		return
        try:
            bot_data = find_one(int(botid))
@@ -139,12 +139,12 @@ async def send_doc(client,message):
        			used_limit(message.from_user.id,0)			     		
        		remain = limit- used
        		if remain < int(file.file_size):
-       		    await message.reply_text(f"Sorry! I can't upload files that are larger than {humanbytes(limit)}. File size detected {humanbytes(file.file_size)}\nUsed Daly Limit {humanbytes(used)} If U Want to Rename Large File Upgrade Your Plan ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰💳",callback_data = "upgrade") ]]))
+       		    await message.reply_text(f"Sorry! I can't upload files that are larger than {humanbytes(limit)}. File size detected {humanbytes(file.file_size)}\nUsed Daly Limit {humanbytes(used)} If U Want to Rename Large File Upgrade Your Plan ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💳",callback_data = "upgrade") ]]))
        		    return
        		if value < file.file_size:
        		    if STRING:
        		        if buy_date==None:
-       		            await message.reply_text(f" You Can't Upload More Then {humanbytes(limit)} Used Daly Limit {humanbytes(used)} ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💰💳",callback_data = "upgrade") ]]))
+       		            await message.reply_text(f" You Can't Upload More Then {humanbytes(limit)} Used Daly Limit {humanbytes(used)} ",reply_markup = InlineKeyboardMarkup([[ InlineKeyboardButton("Upgrade 💳",callback_data = "upgrade") ]]))
        		            return
        		        pre_check = check_expi(buy_date)
        		        if pre_check == True:
@@ -155,7 +155,7 @@ async def send_doc(client,message):
        		            uploadlimit(message.from_user.id,2147483648)
        		            usertype(message.from_user.id,"Free")
 	
-       		            await message.reply_text(f'Your Plane Expired On {buy_date}',quote=True)
+       		            await message.reply_text(f'Your Plan will expire On {buy_date}',quote=True)
        		            return
        		    else:
        		          	await message.reply_text("Can't upload files greater than 2GB ")
